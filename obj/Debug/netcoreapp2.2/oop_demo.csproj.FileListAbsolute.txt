@@ -1,0 +1,11 @@
+/Users/kenjilam/Coding/C#/OOP/oop_demo/obj/Debug/netcoreapp2.2/oop_demo.csprojAssemblyReference.cache
+/Users/kenjilam/Coding/C#/OOP/oop_demo/obj/Debug/netcoreapp2.2/oop_demo.csproj.CoreCompileInputs.cache
+/Users/kenjilam/Coding/C#/OOP/oop_demo/obj/Debug/netcoreapp2.2/oop_demo.AssemblyInfoInputs.cache
+/Users/kenjilam/Coding/C#/OOP/oop_demo/obj/Debug/netcoreapp2.2/oop_demo.AssemblyInfo.cs
+/Users/kenjilam/Coding/C#/OOP/oop_demo/bin/Debug/netcoreapp2.2/oop_demo.deps.json
+/Users/kenjilam/Coding/C#/OOP/oop_demo/bin/Debug/netcoreapp2.2/oop_demo.runtimeconfig.json
+/Users/kenjilam/Coding/C#/OOP/oop_demo/bin/Debug/netcoreapp2.2/oop_demo.runtimeconfig.dev.json
+/Users/kenjilam/Coding/C#/OOP/oop_demo/bin/Debug/netcoreapp2.2/oop_demo.dll
+/Users/kenjilam/Coding/C#/OOP/oop_demo/bin/Debug/netcoreapp2.2/oop_demo.pdb
+/Users/kenjilam/Coding/C#/OOP/oop_demo/obj/Debug/netcoreapp2.2/oop_demo.dll
+/Users/kenjilam/Coding/C#/OOP/oop_demo/obj/Debug/netcoreapp2.2/oop_demo.pdb
