@@ -7,12 +7,20 @@ namespace oop_demo
     {
         static void Main(string[] args)
         {
-            Human A = new Human("Alex");
-            Human B = new Human("Bob",4,4,4,150);
-            B.Display();
-            A.Display().Attack(B);
-            B.Display().Attack(A);
+            Ninja A = new Ninja("kenji");
+            Buffet Meal = new Buffet();
             A.Display();
+
+            A.Eat(Meal.Server()).Eat(Meal.Server()).Eat(Meal.Server()).Eat(Meal.Server()).Eat(Meal.Server()).Display();
+            A.WhatDidYouEat();
+
+            Ninja B = new Ninja("Jin");
+            B.WhatDidYouEat();
+            while (B.IsFull==false)
+            {
+                B.Eat(Meal.Server());
+            }
+            B.WhatDidYouEat();
         }
     }
 }
