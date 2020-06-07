@@ -1,6 +1,6 @@
 using System;
 
-namespace oop_demo.Models
+namespace oop_demo.Models.Hunger
 {
     public class Food 
     {

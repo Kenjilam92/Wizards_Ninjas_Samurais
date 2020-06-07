@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-namespace oop_demo.Models 
+namespace oop_demo.Models.Hunger 
 {
-    class Ninja
+    class HungryNinja
     {
         private int calorieIntake;
         public List<Food> FoodHistory = new List<Food>();
@@ -11,7 +11,7 @@ namespace oop_demo.Models
 
         
         //constructor
-        public Ninja(string name, int _calorieIntake = 0)
+        public HungryNinja(string name, int _calorieIntake = 0)
         {   
             Name = name;
             calorieIntake = _calorieIntake;
@@ -28,7 +28,7 @@ namespace oop_demo.Models
         // add a public "getter" property called "IsFull"
         
         // build out the Eat method
-        public Ninja Eat(Food item)
+        public HungryNinja Eat(Food item)
         {
             if (isFull)
             {
@@ -48,7 +48,7 @@ namespace oop_demo.Models
             }
             return this;
         }
-        public Ninja Display()
+        public HungryNinja Display()
         {
             System.Console.WriteLine("********************************************");
             System.Console.WriteLine($"Name: {Name}");
@@ -56,7 +56,7 @@ namespace oop_demo.Models
             System.Console.WriteLine($"Is Full? {isFull}");
             return this;
         }
-        public Ninja WhatDidYouEat()
+        public HungryNinja WhatDidYouEat()
         {
             System.Console.WriteLine("********************************************");
             if (FoodHistory.Count == 0)

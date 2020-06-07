@@ -1,5 +1,5 @@
 using System;
-namespace oop_demo.Models
+namespace oop_demo.Models.NWS
 {
     public class Human
     {
@@ -7,7 +7,7 @@ namespace oop_demo.Models
         public int Strength;
         public int Intelligence;
         public int Dexterity;
-        private int health ;
+        protected int health ;
 
         public int Health 
         {
@@ -25,6 +25,14 @@ namespace oop_demo.Models
             Dexterity = dexterity;
             health = _health;
         }
+        // public Human (string name, int strength, int intelligence, int dexterity, int _health)
+        // {
+        //     Name= name;
+        //     Strength = 3;
+        //     Intelligence = 3;
+        //     Dexterity = 3;
+        //     health = 100;
+        // }
         public Human Display(){
             System.Console.WriteLine("*************************************");
             System.Console.WriteLine($"Name:         {Name}");
@@ -34,12 +42,24 @@ namespace oop_demo.Models
             System.Console.WriteLine($"Health:       {health}");
             return this;
         }
-        public Human Attack (Human target)
+        public virtual Human Attack (Human target)
         {
             System.Console.WriteLine("**************************************");
             System.Console.WriteLine($"{Name} attacked {target.Name}");
-            target.health -= Strength * 5;
+            target.damage (Strength * 5);
             return this;
+        }
+        public void damage(int amount)
+        {
+            health -= amount;
+            if (health < 0)
+            {
+                health = 0;
+            } 
+        }
+        public void heal (int amount)
+        {
+            health+= amount;
         }
     }
 }

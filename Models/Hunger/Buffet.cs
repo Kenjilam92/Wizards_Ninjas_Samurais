@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System;
-namespace oop_demo.Models 
+namespace oop_demo.Models.Hunger
 {
     class Buffet
     {
