@@ -2,7 +2,7 @@ using System;
 
 namespace oop_demo.Models.Hunger
 {
-    public class Food : IConsumable
+    public class Drink : IConsumable
     {
         public string Name {set;get;}
         public int Calories {set;get;}
@@ -10,10 +10,10 @@ namespace oop_demo.Models.Hunger
         public bool IsSweet {set;get;}
         public string GetInfo()
         {
-            return $"{Name} (Food).\nCalories: {Calories}.\nSpicy?: {IsSpicy}.\nSweet?: {IsSweet}";
+            return $"{Name} (Drink).\nCalories: {Calories}.\nSpicy?: {IsSpicy}.\nSweet?: {IsSweet}";
         } 
 
-        public Food (string name, int calories, bool isSpycy, bool isSweet)
+        public Drink (string name, int calories, bool isSpycy, bool isSweet)
         {
             Name = name;
             Calories = calories;

@@ -4,7 +4,7 @@ namespace oop_demo.Models.Hunger
 {
     class Buffet
     {
-        public List<Food> Menu = new List<Food>{};
+        public List<IConsumable> Menu = new List<IConsumable>{};
     
         public Buffet () 
         {
@@ -13,11 +13,16 @@ namespace oop_demo.Models.Hunger
             Menu.Add(new Food("Icy Cream",700,false,true));
             Menu.Add(new Food("Candy",300,false,false));
             Menu.Add(new Food("Korean Fried Chicken",1800,true,true));
+            Menu.Add(new Drink("Soda",350,false,true));
+            Menu.Add(new Drink("Coffee",450,false,false));
+            Menu.Add(new Drink("RedBull",580,false,true));
+            Menu.Add(new Drink("Water",10,false,false));
+            Menu.Add(new Drink("Cocktail",250,true,true));
         }
-        public Food Server()
+        public IConsumable Server()
         {   
             Random select = new Random();        
-            Food Disc = Menu[select.Next(0,Menu.Count)];
+            IConsumable Disc = Menu[select.Next(0,Menu.Count)];
             // System.Console.WriteLine($"{Disc.Name} is selected");
             return Disc;
         }

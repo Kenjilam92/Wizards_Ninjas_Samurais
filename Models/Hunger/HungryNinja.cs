@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 namespace oop_demo.Models.Hunger 
 {
-    class HungryNinja
+    abstract class HungryNinja
     {
-        private int calorieIntake;
-        public List<Food> FoodHistory = new List<Food>();
+        protected int calorieIntake;
+        public List<IConsumable> ConsumingHistory = new List<IConsumable>();
         
         public string Name;
-        private bool isFull = false;
 
         
         //constructor
@@ -17,55 +16,28 @@ namespace oop_demo.Models.Hunger
             calorieIntake = _calorieIntake;
         }
 
-        public bool IsFull
-        {
-            get 
-            {
-                return isFull;
-            }
-        } 
+        public abstract bool IsFull {get;}
+    
+        public abstract HungryNinja Eat(IConsumable item);
         
-        // add a public "getter" property called "IsFull"
-        
-        // build out the Eat method
-        public HungryNinja Eat(Food item)
-        {
-            if (isFull)
-            {
-                System.Console.WriteLine("********************************************");
-                System.Console.WriteLine($"Ninja {Name} is full");
-            }
-            else 
-            {
-                System.Console.WriteLine("********************************************");
-                calorieIntake+= item.Calories;
-                System.Console.WriteLine($"{Name} ate {item.Name}");
-                FoodHistory.Add(item);
-                if (calorieIntake > 12000)
-                {
-                    isFull=true;
-                }
-            }
-            return this;
-        }
         public HungryNinja Display()
         {
             System.Console.WriteLine("********************************************");
             System.Console.WriteLine($"Name: {Name}");
             System.Console.WriteLine($"Calories Intake: {calorieIntake}");
-            System.Console.WriteLine($"Is Full? {isFull}");
+            System.Console.WriteLine($"Is Full? {IsFull}");
             return this;
         }
         public HungryNinja WhatDidYouEat()
         {
             System.Console.WriteLine("********************************************");
-            if (FoodHistory.Count == 0)
+            if (ConsumingHistory.Count == 0)
             {
                 System.Console.WriteLine($"{Name} ate nothing");
             }
             else {
                 System.Console.WriteLine($"{Name} ate following items:");
-                foreach(Food item in FoodHistory)
+                foreach(Food item in ConsumingHistory)
                 {
                     System.Console.Write($"{item.Name}, ");
                 }
